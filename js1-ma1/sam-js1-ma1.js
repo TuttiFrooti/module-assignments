@@ -69,4 +69,6 @@ function allCats_q10(catArray) {
 
     newHTML += details;
   }
+
+  return newHTML;
 }
