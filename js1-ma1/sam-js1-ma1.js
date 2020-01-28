@@ -47,21 +47,22 @@ allCats(cats);
 function allCats_q8(catArray) {
   let cat_names = "";
   for(var i = 0; i < catArray.length; i++) {
-    cat_names += `<h5>${catArray[i].name}</h5>\n`
+    cat_names += `<h5>${catArray[i].name}</h5>\n`;
   }
   return cat_names
 }
 
 // Question 9
-
-resultContainer.innerHTML = allCats_q8(cats);
+resultContainer.innerHTML += allCats_q8(cats);
 
 // Question 10
 
 function allCats_q10(catArray) {
   let newHTML = "";
   for(var i = 0; i < catArray.length; i++) {
+
     catArray[i].age = catArray[i].age ? catArray[i].age : "Age unknown";
+
     let details = `<div>
                     <h5>${catArray[i].name}</h5>
                     <p>${catArray[i].age}</p>
