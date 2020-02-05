@@ -4,12 +4,10 @@
 }
 
 // Question 2
-fetch('https://elephant-api.herokuapp.com/elephants')
-.then(res => {
-  console.log(res);
-})
+fetch('https://api.rawg.io/api/games?genres=sports')
+.then(res => res.json())
 .then(response => {
-  response.forEach(element => {
+  response.results.forEach(element => {
     console.log(element.name)
   });
 })
