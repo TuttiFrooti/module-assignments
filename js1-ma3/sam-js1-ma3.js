@@ -49,7 +49,6 @@ new_li.innerHTML = "Parrots";
 animals.appendChild(new_li);
 elephants.before(new_li);
 
-
 // Question 7
 fetch('https://api.rawg.io/api/games/3801')
 .then(res => res.json())
