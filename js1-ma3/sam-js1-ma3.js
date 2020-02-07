@@ -25,7 +25,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 if (!params.has("userId")) {
   document.location.href = "/third.html";
-} else if (params.get("userId") > 10) {
+} else if (params.get("userId") < 10) {
   document.location.href = "/first.html";
 } else {
   document.location.href = "/second.html";
