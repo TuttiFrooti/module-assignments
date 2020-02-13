@@ -1,6 +1,22 @@
-<button class="test" data-animal='dog'>boop</button>
+<ul class="animals">
+  <li class="cows">Cows</li>
+  <li class="elephants">Elephants</li>
+</ul>
+
+<div class="rating"></div>
+
 <script>
-  document.querySelector("[data-animal='dog']").addEventListener("mouseout", function () {
-    console.log("hi")
-  })
+  (function() {
+
+    fetch('https://api.rawg.io/api/games/3801')
+      .then(res => res.json())
+      .then(response => {
+        const rating_div = document.querySelector('.rating');
+        rating_div.innerHTML = response.rating;
+      })
+      .catch(error => {
+        console.log(error);
+      })
+
+  })()
 </script>
